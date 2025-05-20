@@ -1,0 +1,14 @@
+---
+import { linksData } from "@/data/siteData";
+
+
+---
+
+<header class="text-corda-text-clair bg-corda-secondary relative w-full h-14 hidden md:flex md:flex-row items-center md:justify-between px-4 z-40 shadow-m">
+    <a href="/" class="text-4xl font-bold text-tealA pl-10">Jo&euml;lle Corda</a>
+    <nav class="hidden md:block space-x-4">
+        {
+            linksData.map((link) => <a href={link.url} class="">{link.text}</a>)
+        }
+    </nav>
+</header>
