@@ -1,0 +1,17 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+export interface BtnProps extends HTMLAttributes<"a">{
+    href: string;
+    label: string
+}
+
+const { href, label} = Astro.props as BtnProps
+
+---
+
+<button class="px-2 py-1 md:py-2 bg-corda-action rounded-full w-72">
+    <a href={href} class="text-md text-corda-text-clair">
+        {label}
+    </a>
+</button>
