@@ -1,0 +1,18 @@
+---
+type Props = {
+    fond: "vert" | "blanc"
+}
+
+
+const {fond = "vert"} = Astro.props;
+
+let bgFond: string = "bg-corda-bg-secondary";
+
+if (fond === "blanc") {
+    bgFond = "bg-corda-bg-primary"
+}
+---
+
+<section class:list={["flex", "flex-col", "items-center", "md:justify-evenly", "w-full", bgFond]}>
+    <slot />
+</section>
