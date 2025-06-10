@@ -1,12 +1,17 @@
 ---
 import type { CardCoachingInfos } from "@/data/cardsCoaching"
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
 
 type Props = {
     card: CardCoachingInfos
 }
 
 const { card } = Astro.props
-const { imgSrc, imgAlt, title, intro, liArr, link } = card
+const { imagePath, altText, title, intro, liArr, link } = card
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/coaching/*.{jpeg,jpg,png,gif}')
+// if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/coaching/*.{jpeg,jpg,png,gif}"`);
+// https://docs.astro.build/fr/recipes/dynamically-importing-images/
 
 ---
 
@@ -17,7 +22,7 @@ const { imgSrc, imgAlt, title, intro, liArr, link } = card
     </div>
     {/* IMAGE */}
     <div>
-        <img src="../../assets/coaching/card-nutrition.jpg" alt={imgAlt} />
+        <Image src={images[imagePath]()} alt={altText} />
     </div>
     {/* TEXTE */}
     <div class="h-[190px] px-2 py-4">
