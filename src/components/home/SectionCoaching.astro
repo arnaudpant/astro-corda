@@ -1,0 +1,70 @@
+---
+import Sections from "../ui/Sections.astro";
+import TitleSection from "../ui/TitleSection.astro";
+import CardCoaching from "../ui/CardCoaching.astro";
+import Plumes from "../ui/Plumes.astro";
+import type { CardCoachingInfos } from "@/data/cardsCoaching";
+
+const CardsCoaching: CardCoachingInfos[] = [
+    {
+        imgSrc: 'cards/coaching/card-nutrition.jpg',
+        imgAlt: 'coaching nutrition',
+        title: 'NUTRITION',
+        intro: 'Vous voulez:',
+        liArr: ['▸ Perdre du poids ou en reprendre', '▸ Rééquilibrer votre flore intestinale', '▸ Retrouver la santé'],
+        link: "/coaching-nutrition"
+    },
+    {
+        imgSrc: 'cards/coaching/card-stress.jpg',
+        imgAlt: 'coaching gestion des stress',
+        title: 'GESTION des STRESS et des EMOTIONS',
+        intro: 'Vous souffrez de:',
+        liArr: ['▸ Anxiétés, angoisses, insomnies', '▸ Migraines, acouphènes', '▸ Ulcère, contractures, spasmophilie...'],
+        link: "/coaching-gestion-stress"
+    },
+    {
+        imgSrc: 'cards/coaching/card-sport.jpg',
+        imgAlt: 'coaching sport',
+        title: 'SPORT SANTÉ',
+        intro: 'Vous sortez:',
+        liArr: ['▸ D\’une longue période sans activité physique', '▸ D\'une opération', '▸ D\'un burn-out, maladie, autre ...'],
+        link: "/coaching-sport"
+    },
+]
+
+---
+
+<Sections fond="vert">
+    <TitleSection>COACHING GLOBAL</TitleSection>
+    <div class="container flex flex-col justify-center px-4 md:px-8 pb-10">
+        <p class="px-8 pt-4 text-lg">
+            Retrouvez votre bien-être naturel grâce à mon concept
+            naturopathique des 3 piliers essentiels: Nutrition
+            équilibrée, Gestion holistique du stress et des émotions, et
+            Sport-santé adapté.
+        </p>
+        <p class="px-8 pt-4 pb-2 text-lg">
+            Cette approche naturopathique complète vous guide vers
+            l'autonomie de santé en vous apprenant à maîtriser votre
+            alimentation saine, à gérer efficacement vos stress
+            quotidiens et à prendre soin de votre corps par des méthodes
+            naturelles.
+        </p>
+        <p class="px-8 pt-4 pb-10 text-lg">
+            Une naturopathie personnalisée pour retrouver votre
+            équilibre vital et prévenir les déséquilibres de santé.
+        </p>
+    </div>
+    <div class="flex flex-col md:flex-row flex-wrap justify-around gap-10">
+        {
+            CardsCoaching.map((cardCoaching) => (
+                <CardCoaching card={cardCoaching} />
+            ))
+        }
+    </div>
+    <p class="px-8 pt-10 text-lg">
+        Une hygiène de vie globale favorise le processus naturel de
+        guérison existant en chacun de nous.
+    </p>
+    <Plumes />
+</Sections>

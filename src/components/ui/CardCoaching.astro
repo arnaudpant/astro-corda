@@ -1,0 +1,37 @@
+---
+import type { CardCoachingInfos } from "@/data/cardsCoaching"
+
+type Props = {
+    card: CardCoachingInfos
+}
+
+const { card } = Astro.props
+const { imgSrc, imgAlt, title, intro, liArr, link } = card
+
+---
+
+<div class="flex flex-col w-[300px] shadow-md rounded-xl bg-corda-bg-primary">
+    {/* TITRE */}
+    <div class="h-20 flex items-center justify-center">
+        <h3 class="text-xl text-center md:text-xl">{title}</h3>
+    </div>
+    {/* IMAGE */}
+    <div>
+        <img src="../../assets/coaching/card-nutrition.jpg" alt={imgAlt} />
+    </div>
+    {/* TEXTE */}
+    <div class="h-[190px] px-2 py-4">
+        <p class="pb-1 text-lg">{intro}</p>
+        <ul>
+            {
+                liArr?.map((listeLi) => (
+                    <li class="py-1 text-corda-text-fonce">{listeLi}</li>
+                ))
+            }
+        </ul>
+    </div>
+    {/* CALL TO ACTION */}
+    <div class="mb-6 mx-auto">
+        <a href={`${link}`} class="block px-4 py-2 bg-corda-action text-corda-text-clair rounded-full">Cliquez pour en savoir plus</a>
+    </div>
+</div>
