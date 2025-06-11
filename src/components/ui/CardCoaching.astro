@@ -17,7 +17,7 @@ if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: 
     </div>
     {/* IMAGE */}
     <div>
-        <Image src={images[imagePath]()} alt={altText} />
+        <Image src={images[imagePath]()} alt={altText} width={300} height={188} format="webp" />
     </div>
     {/* TEXTE */}
     <div class="h-[190px] px-2 py-4">
