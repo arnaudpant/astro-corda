@@ -1,0 +1,17 @@
+---
+import type { CardMassageInfos } from '@/data/cardsType';
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+const { imagePath, altText, titleCard, timeSeance, linkCard } =  Astro.props as CardMassageInfos
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/massages/*.{jpeg,jpg,png,gif,webp}')
+if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/massages/*.{jpeg,jpg,png,gif,webp}"`);
+---
+
+<div class="relative flex flex-col justify-center w-[300px] h-[200px] shadow-card rounded-xl bg-tealA overflow-hidden cursor-pointer">
+    <a href={linkCard}>
+        <Image src={images[imagePath]()} alt={altText} class="absolute w-full " />
+        <p class="absolute bg-tealI text-tealA text-2xl text-center py-1 rounded-full z-10 min-w-[180px] bottom-4 left-1/2 -translate-x-1/2 shadow-lg">{titleCard}</p>
+    </a>
+    <p class="text-xl text-center py-3">{timeSeance}</p>
+</div>

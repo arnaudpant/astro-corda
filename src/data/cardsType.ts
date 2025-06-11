@@ -6,3 +6,11 @@ export type CardCoachingInfos = {
     liArr: string[],
     linkCard: string
 }
+
+export type CardMassageInfos = {
+    imagePath: string,
+    altText: string,
+    titleCard: string,
+    timeSeance: string,
+    linkCard: string
+}
