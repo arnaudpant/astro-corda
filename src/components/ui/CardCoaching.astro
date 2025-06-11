@@ -3,22 +3,17 @@ import type { CardCoachingInfos } from "@/data/cardsCoaching"
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
 
-type Props = {
-    card: CardCoachingInfos
-}
 
-const { card } = Astro.props
-const { imagePath, altText, title, intro, liArr, link } = card
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/coaching/*.{jpeg,jpg,png,gif}')
-// if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/coaching/*.{jpeg,jpg,png,gif}"`);
-// https://docs.astro.build/fr/recipes/dynamically-importing-images/
+const { imagePath, altText, titleCard, introCard, liArr, linkCard } =  Astro.props as CardCoachingInfos
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/coaching/*.jpg')
+if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/coaching/*.{jpeg,jpg,png,gif}"`);
 
 ---
 
 <div class="flex flex-col w-[300px] shadow-md rounded-xl bg-corda-bg-primary">
     {/* TITRE */}
     <div class="h-20 flex items-center justify-center">
-        <h3 class="text-xl text-center md:text-xl">{title}</h3>
+        <h3 class="text-xl text-center md:text-xl text-corda-text-fonce">{titleCard}</h3>
     </div>
     {/* IMAGE */}
     <div>
@@ -26,7 +21,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/coachin
     </div>
     {/* TEXTE */}
     <div class="h-[190px] px-2 py-4">
-        <p class="pb-1 text-lg">{intro}</p>
+        <p class="pb-1 text-lg">{introCard}</p>
         <ul>
             {
                 liArr?.map((listeLi) => (
@@ -37,6 +32,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/coachin
     </div>
     {/* CALL TO ACTION */}
     <div class="mb-6 mx-auto">
-        <a href={`${link}`} class="block px-4 py-2 bg-corda-action text-corda-text-clair rounded-full">Cliquez pour en savoir plus</a>
+        <a href={`${linkCard}`} class="block px-4 py-2 bg-corda-action text-corda-text-clair rounded-full">Cliquez pour en savoir plus</a>
     </div>
 </div>
