@@ -1,8 +1,66 @@
 ---
+import type { CardMassageInfos } from "@/data/cardsType";
 import Sections from "../ui/Sections.astro";
 import TitleSection from "../ui/TitleSection.astro";
+import CardMassage from "../ui/CardMassage.astro";
+import Plumes from "../ui/Plumes.astro";
 
+const CardsMassageList: CardMassageInfos[] = [
+    {
+        imagePath: "/src/assets/massages/massage-californien.png",
+        altText: "massage californien",
+        titleCard: "Californien",
+        timeSeance: "60min",
+        linkCard: "/massage-californien" 
+    },
+    {
+        imagePath: "/src/assets/massages/massage-infini.png",
+        altText: "massage infini",
+        titleCard: "Infini",
+        timeSeance: "60min",
+        linkCard: "/massage-infini" 
+    },
+    {
+        imagePath: "/src/assets/massages/massage-kansu.png",
+        altText: "massage kansu",
+        titleCard: "Kansu",
+        timeSeance: "30min",
+        linkCard: "/massage-kansu" 
+    },
+    {
+        imagePath: "/src/assets/massages/massage-kobido.jpg",
+        altText: "massage kobido",
+        titleCard: "Kobido",
+        timeSeance: "60min",
+        linkCard: "/massage-kobido"
+    },
+]
+const CardsReflexologieList: CardMassageInfos[] = [
+    {
+        imagePath: "/src/assets/massages/massage-dien-chan.png",
+        altText: "massage dien'chan",
+        titleCard: "Dien' Chan",
+        timeSeance: "60min",
+        linkCard: "/massage-dienchan" 
+    },
+    {
+        imagePath: "/src/assets/massages/massage-chi-nei-tsang.png",
+        altText: "massage chi nei tsang",
+        titleCard: "Chi Nei Tsang",
+        timeSeance: "60min",
+        linkCard: "/massage-chinei" 
+    },
+]
 
+const CardsSonore: CardMassageInfos[] = [
+    {
+        imagePath: "/src/assets/massages/sonore.png",
+        altText: "Relaxation sonore",
+        titleCard: "Relax sonore",
+        timeSeance: "60min",
+        linkCard: "/reflection-sonore"
+    },
+]
 ---
 
 <Sections fond="vert">
@@ -35,4 +93,73 @@ import TitleSection from "../ui/TitleSection.astro";
             régénération cellulaire et un éclat rajeuni.
         </p>
     </div>
+    <div class="flex flex-col md:flex-row flex-wrap justify-around gap-10 mt-6">
+        {
+            CardsMassageList.map((cardMassage) => (
+                <CardMassage 
+                    imagePath={cardMassage.imagePath}
+                    altText={cardMassage.altText}
+                    titleCard={cardMassage.titleCard}
+                    timeSeance={cardMassage.timeSeance}
+                    linkCard={cardMassage.linkCard} />
+            ))
+        }
+    </div>
+    <TitleSection>Réfléxologie</TitleSection>
+    <div class="container flex flex-col justify-center px-4 md:px-8 pb-10">
+        <p class="px-8 pt-4 text-lg">
+            Complétez votre expérience holistique grâce à la
+            réflexologie avec le{" "}
+            <a href="/massage-dienchan" class="text-corda-action">
+                massage Dien' Chan
+            </a>
+            , stimulant les points réflexes du visage, et le{" "}
+            <a href="/massage-chinei" class="text-corda-action">
+                massage Chi Nei Tsang
+            </a>
+            , massage abdominal ancestral qui harmonise vos organes
+            internes et vos émotions. Une approche complète pour
+            revitaliser naturellement votre corps et votre esprit.
+        </p>
+    </div>
+    <div class="flex flex-col md:flex-row flex-wrap justify-around gap-10 mt-6">
+        {
+            CardsReflexologieList.map((cardMassage) => (
+                <CardMassage 
+                    imagePath={cardMassage.imagePath}
+                    altText={cardMassage.altText}
+                    titleCard={cardMassage.titleCard}
+                    timeSeance={cardMassage.timeSeance}
+                    linkCard={cardMassage.linkCard} />
+            ))
+        }
+    </div>
+    <TitleSection>Relaxation Sonore</TitleSection>
+    <div class="container flex flex-col justify-center px-4 md:px-8 pb-10">
+        <p class="px-8 pt-4 text-lg">
+            Plongez dans une dimension sensorielle unique avec{" "}
+            <a href="/reflection-sonore" class="text-corda-action">
+                la relaxation sonore
+            </a>{" "}
+            aux bols tibétains et bols de cristal. Ces vibrations
+            thérapeutiques résonnent profondément dans votre corps,
+            créant une méditation immersive qui équilibre vos chakras,
+            apaise votre système nerveux et favorise une détente mentale
+            profonde. Une approche complète pour revitaliser
+            naturellement votre corps et votre esprit.
+        </p>
+    </div>
+    <div class="flex flex-col md:flex-row flex-wrap justify-around gap-10 mt-6">
+        {
+            CardsSonore.map((cardMassage) => (
+                <CardMassage 
+                    imagePath={cardMassage.imagePath}
+                    altText={cardMassage.altText}
+                    titleCard={cardMassage.titleCard}
+                    timeSeance={cardMassage.timeSeance}
+                    linkCard={cardMassage.linkCard} />
+            ))
+        }
+    </div>
+    <Plumes />
 </Sections>

@@ -7,11 +7,12 @@ const { imagePath, altText, titleCard, timeSeance, linkCard } =  Astro.props as 
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/massages/*.{jpeg,jpg,png,gif,webp}')
 if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/massages/*.{jpeg,jpg,png,gif,webp}"`);
 ---
-
-<div class="relative flex flex-col justify-center w-[300px] h-[200px] shadow-card rounded-xl bg-tealA overflow-hidden cursor-pointer">
+<div>
     <a href={linkCard}>
-        <Image src={images[imagePath]()} alt={altText} class="absolute w-full " />
-        <p class="absolute bg-tealI text-tealA text-2xl text-center py-1 rounded-full z-10 min-w-[180px] bottom-4 left-1/2 -translate-x-1/2 shadow-lg">{titleCard}</p>
+        <div class="relative flex flex-col justify-center w-[300px] h-[200px] shadow-card rounded-xl bg-corda-bg-primary overflow-hidden cursor-pointer">
+            <Image src={images[imagePath]()} alt={altText} class="absolute w-full " />
+            <p class="absolute bg-corda-secondary text-corda-text-clair text-2xl text-center py-1 rounded-full z-10 min-w-[180px] bottom-4 left-1/2 -translate-x-1/2 shadow-lg">{titleCard}</p>
+        </div>
     </a>
     <p class="text-xl text-center py-3">{timeSeance}</p>
 </div>
