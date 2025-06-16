@@ -1,0 +1,26 @@
+---
+import Plumes from "./Plumes.astro";
+import Sections from "./Sections.astro";
+import TitleSection from "./TitleSection.astro";
+
+
+---
+
+<Sections fond="vert">
+    <TitleSection>CABINET</TitleSection>
+    <div itemscope itemtype = "https://schema.org/PostalAddress" class="text-center p-2">
+        <h3 class="text-xl pb-4 pt-1">Du lundi au samedi</h3>
+        <p>9h à 19h | Samedi: 17h</p>
+        <p class="text-xl font-semibold"></p>
+        <p itemprop="streetAddress" class="pt-2">78 Route de l’Arpenteur</p>
+        <p itemprop="addressLocality">26300 Marches</p>
+    </div>
+    <div class="mt-5">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.3102977574786!2d5.1133826774280235!3d44.97800727107042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478aac8ac32d723d%3A0xa43890d2235a996e!2s78%20Rte%20de%20l&#39;Arpenteur%2C%2026300%20Marches!5e0!3m2!1sfr!2sfr!4v1734965131678!5m2!1sfr!2sfr"
+            width="300"
+            height="300"
+        ></iframe>
+    </div>
+    <Plumes />
+</Sections>
