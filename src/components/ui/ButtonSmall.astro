@@ -9,7 +9,7 @@ export interface BtnProps extends HTMLAttributes<"a">{
 
 const { href, label, itemProp} = Astro.props as BtnProps
 ---
-<button itemprop={itemProp} class="px-2 py-1 md:py-2 bg-primaire text-action text-md md:text-lg rounded-full w-40">
+<button itemprop={itemProp} class="px-2 py-1 md:py-2 bg-corda-secondary text-corda-text-clair text-md md:text-lg rounded-full w-60">
     <a href={href}>
         {label}
     </a>
