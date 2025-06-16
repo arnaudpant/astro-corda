@@ -3,13 +3,14 @@ import type { HTMLAttributes } from "astro/types";
 
 export interface BtnProps extends HTMLAttributes<"a">{
     href: string;
-    label: string
-    itemProp: string
+    label: string;
+    itemProp: string;
+    fond?: string;
 }
 
-const { href, label, itemProp} = Astro.props as BtnProps
+const { href, label, itemProp, fond = "bg-corda-secondary"} = Astro.props as BtnProps
 ---
-<button itemprop={itemProp} class="px-2 py-1 md:py-2 bg-corda-secondary text-corda-text-clair text-md md:text-lg rounded-full w-60">
+<button itemprop={itemProp} class:list={["px-2", "py-1", "md:py-2", "text-corda-text-clair", "text-md", "md:text-lg", "rounded-full", "shadow-sm", "w-60", fond]}>
     <a href={href}>
         {label}
     </a>

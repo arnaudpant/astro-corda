@@ -1,10 +1,12 @@
 ---
 import { linksData } from "@/data/siteData";
+import ButtonSmall from "./ui/ButtonSmall.astro";
 
 ---
 
 <footer class="flex flex-col items-center justify-around gap-4 bg-corda-secondary text-corda-text-clair px-4 py-8">
     <div class="flex flex-col md:flex-row w-full gap-8">
+
         <div class="md:w-1/3 md:px-10">
             <svg viewBox="0 0 521.5 295.5">
                 <g fill="#32CBFF">
@@ -40,20 +42,32 @@ import { linksData } from "@/data/siteData";
         </div>
 
         <div class="md:w-1/3 md:px-10 flex flex-col items-center gap-4">
+            <h2 class="text-xl pb-4">Prendre rendez-vous</h2>
             <div class="hidden md:block">
-                BTN
+                <ButtonSmall  
+                    itemProp="email"
+                    href="mailto:cordajoelle@gmail.com"
+                    label="Par mail"
+                    fond="bg-corda-action" />
             </div>
-            <div class="hidden md:block">
-                BTN
+            <div class="md:block">
+                <ButtonSmall  
+                itemProp="telephone"
+                href="tel:+33651486895"
+                label="Par téléphone"
+                fond="bg-corda-action" />
             </div>
             <h2 class="text-xl pt-8 pb-1">Adresse</h2>
             <p>78 Route de l’Arpenteur</p>
             <p>26300 Marches</p>
         </div>
+
     </div>
+
     <div class="flex flex-col md:items-start w-full md:flex-row md:gap-4 md:px-10 py-2 border-t-2">
         <a href="/cgu">Mentions légales</a>
         <a href="/politique">Politique de confidentialité</a>
         &copy; {new Date().getFullYear()}
     </div>
+
 </footer>
