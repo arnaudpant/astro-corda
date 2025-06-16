@@ -9,10 +9,11 @@ import SectionPlanning from '@/components/home/SectionPlanning.astro';
 import SectionCallTAction from '@/components/ui/SectionCallTAction.astro';
 import SectionMap from '@/components/ui/SectionMap.astro';
 import Layout from '@/layouts/Layout.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '@/lib/constantes';
 
 ---
 
-<Layout>
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<div class="flex-1">
 		<SectionHero />
 		<SectionFaq />
