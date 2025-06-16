@@ -6,3 +6,6 @@ export const CGU_DESCRIPTION = "Conditions générales d'utilisation pour le sit
 
 export const POLITIQUE_TITLE = "Politique de confidentialité"
 export const POLITIQUE_DESCRIPTION = "Politique de confidentialité pour le site de Joelle Corda, Naturopathe sophrologue et coach sportif à Marches (26000)"
+
+export const NATUROPATHIE_TITLE = "Le rôle de la naturopathie"
+export const NATUROPATHIE_DESCRIPTION = "Quel est le rôle de la naturopathie "
