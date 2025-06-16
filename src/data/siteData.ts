@@ -28,7 +28,7 @@ export const linksData: LinkNav[] = [
     },
     {
         text: "A propos",
-        url: "/about-naturologie-sophrologie"
+        url: "/about"
     },
     {
         text: "Relaxations guidées",

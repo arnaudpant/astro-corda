@@ -12,3 +12,6 @@ export const NATUROPATHIE_DESCRIPTION = "Quel est le rôle de la naturopathie "
 
 export const TARIFS_TITLE = "Tarifs séance naturopathie, sophrologie"
 export const TARIFS_DESCRIPTION = "Détails des tarifs pour une séance de naturopathie, de sophrologie ou un coaching"
+
+export const ABOUT_TITLE = "Joelle Corda, Naturopathie, Sophrologie et coach sportif"
+export const ABOUT_DESCRIPTION = "Retrouvez votre poids de forme, gérez vos stress et retrouvez une activité physique avec Joelle Corda, naturopathe, sophrologue. 26300 Marches"

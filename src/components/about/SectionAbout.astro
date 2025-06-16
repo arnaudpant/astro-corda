@@ -1,0 +1,51 @@
+---
+import Sections from "../ui/Sections.astro";
+import { Image } from 'astro:assets';
+import portraitJoelleCorda from "@/assets/images/about-joelle.png"
+
+---
+
+<Sections>
+    <div itemscope itemtype="https://schema.org/Person" class="flex flex-col items-center md:justify-evenly">
+        <h1 class="font-title text-2xl md:text-4xl font-semibold m-5 pt-4 md:pt-8">Mon parcours</h1>
+        <h2 itemprop="name" class="text-xl md:text-3xl m-2">Je suis Jo&euml;lle Corda</h2>
+        <h3 itemprop="jobTitle" class="md:text-xl px-2 text-center">Naturopathe, Sophrologue et Éducatrice Sportive</h3>
+        <div class="flex flex-col md:flex-row items-center gap-8 mt-4">
+            <div class="md:w-1/3">
+                <Image src={portraitJoelleCorda} alt="portrait de Joelle Corda" format="webp" width={511} height={562} />
+            </div>
+            <div class="md:w-2/3 ml-4 md:ml-0 mr-4 md:mr-8">
+                <p class="pb-4">
+                    Le bien-être est le fil d’argent de mon parcours
+                    professionnel depuis 30 ans.
+                </p>
+                <p class="pb-4">
+                    Esthéticienne de mon premier métier, je m’ouvre
+                    au langage du corps par la pratique et
+                    l’enseignement de l’expression corporelle
+                    (Brevets d’États fitness et Sports pour Tous).
+                </p>
+                <p class="pb-4">
+                    En 1999 J'étudie la Naturopathie en cursus
+                    intensif à l'école Euronature d'Aix en Provence,
+                    complété par le certificat de Conseillère en
+                    Nutrition & Diététique à l'école Naturilys en
+                    2017.
+                </p>
+                <p class="pb-4">
+                    Après le certificat de Relaxologue en 2010
+                    j’expérimente les techniques de Relaxation
+                    psycho corporelle, ainsi que la Sophrologie
+                    Caycédienne dont je suis certifiée depuis 2015.
+                </p>
+                <p class="pb-4">
+                    Je suis sur la voie, celle de l’épanouissement
+                    personnel et vous propose de vous partager mon
+                    savoir-faire et mon savoir-être en toute
+                    humilité.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</Sections>

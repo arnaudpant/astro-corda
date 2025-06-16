@@ -1,0 +1,13 @@
+---
+import SectionAbout from "@/components/about/SectionAbout.astro";
+import SectionDiplomes from "@/components/about/SectionDiplomes.astro";
+import Layout from "@/layouts/Layout.astro";
+import { ABOUT_DESCRIPTION, ABOUT_TITLE } from "@/lib/constantes";
+
+
+---
+
+<Layout title={ABOUT_TITLE} description={ABOUT_DESCRIPTION}>
+    <SectionAbout />
+    <SectionDiplomes />
+</Layout>
