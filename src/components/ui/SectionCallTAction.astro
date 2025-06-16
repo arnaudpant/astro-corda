@@ -8,17 +8,16 @@ import ButtonSmall from "@/components/ui/ButtonSmall.astro"
 
 <Sections fond="blanc">
     <TitleSection>CONTACTEZ MOI</TitleSection>
-    <div>
+    <div class="container flex flex-col justify-center px-4 md:px-8 pb-10">
         <h2 class="text-xl text-center md:text-2xl m-2">JE VOUS OFFRE</h2>
         <h2 class="text-xl text-center md:text-2xl m-2">VOTRE 1er RENDEZ-VOUS !</h2>
-    </div>
-    <div itemscope itemtype="https://schema.org/PostalAddress" class="flex flex-col md:flex-row gap-4 my-8">
-        <ButtonSmall itemProp="telephone" href="tel:+33651486895" label="+33(0)6 51 48 68 95" />
-        <ButtonSmall itemProp="email" href="mailto:cordajoelle@gmail.com" label="E-MAIL" />
-    </div>
-    <div class="px-4">
+        <div itemscope itemtype="https://schema.org/PostalAddress" class="flex flex-col items-center md:justify-center md:flex-row gap-4 my-8">
+            <ButtonSmall itemProp="telephone" href="tel:+33651486895" label="+33(0)6 51 48 68 95" />
+            <ButtonSmall itemProp="email" href="mailto:cordajoelle@gmail.com" label="E-MAIL" />
+        </div>
         <p class="text-lg text-center pb-4">Je vous accompagne en cabinet, à domicile et à distance.</p>
-        <p class="text-lg text-center pb-4">Tarifs adaptés pour les étudiants, demandeurs d’emploi et personnes en difficultés financières.</p>
+        <p class="text-lg text-center">Tarifs adaptés pour les étudiants, demandeurs d’emploi et personnes en difficultés financières.</p>
+
     </div>
     <Plumes />
 </Sections> 
