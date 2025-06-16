@@ -9,3 +9,6 @@ export const POLITIQUE_DESCRIPTION = "Politique de confidentialité pour le site
 
 export const NATUROPATHIE_TITLE = "Le rôle de la naturopathie"
 export const NATUROPATHIE_DESCRIPTION = "Quel est le rôle de la naturopathie "
+
+export const TARIFS_TITLE = "Tarifs séance naturopathie, sophrologie"
+export const TARIFS_DESCRIPTION = "Détails des tarifs pour une séance de naturopathie, de sophrologie ou un coaching"
