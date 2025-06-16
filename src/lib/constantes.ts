@@ -3,3 +3,6 @@ export const SITE_DESCRIPTION = "Retrouvez votre poids de forme, gérez vos stre
 
 export const CGU_TITLE = "Conditions générales d'utilisation"
 export const CGU_DESCRIPTION = "Conditions générales d'utilisation pour le site de Joelle Corda, Naturopathe sophrologue et coach sportif à Marches (26000)"
+
+export const POLITIQUE_TITLE = "Politique de confidentialité"
+export const POLITIQUE_DESCRIPTION = "Politique de confidentialité pour le site de Joelle Corda, Naturopathe sophrologue et coach sportif à Marches (26000)"
