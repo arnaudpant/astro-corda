@@ -1,0 +1,13 @@
+---
+import { Image } from "astro:assets";
+import SectionMap from "../ui/SectionMap.astro";
+import myCabinet from "@/assets/images/cabinet.webp"
+import Sections from "../ui/Sections.astro";
+
+---
+<Sections>
+    <SectionMap />
+    <div class="flex flex-col md:flex-row flex-wrap gap-8 m-4 justify-center">
+        <Image src={myCabinet} alt="Cabinet de naturopathe" />
+    </div>
+</Sections>

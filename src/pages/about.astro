@@ -1,6 +1,9 @@
 ---
 import SectionAbout from "@/components/about/SectionAbout.astro";
+import SectionCabinet from "@/components/about/SectionCabinet.astro";
 import SectionDiplomes from "@/components/about/SectionDiplomes.astro";
+import SectionWhyMe from "@/components/about/SectionWhyMe.astro";
+import SectionCallTAction from "@/components/ui/SectionCallTAction.astro";
 import Layout from "@/layouts/Layout.astro";
 import { ABOUT_DESCRIPTION, ABOUT_TITLE } from "@/lib/constantes";
 
@@ -10,4 +13,7 @@ import { ABOUT_DESCRIPTION, ABOUT_TITLE } from "@/lib/constantes";
 <Layout title={ABOUT_TITLE} description={ABOUT_DESCRIPTION}>
     <SectionAbout />
     <SectionDiplomes />
+    <SectionWhyMe />
+    <SectionCabinet />
+    <SectionCallTAction />
 </Layout>
