@@ -21,3 +21,12 @@ export const RELAXATION_DESCRIPTION = ""
 
 export const ATELIER_TITLE = "Ateliers"
 export const ATELIER_DESCRIPTION = ""
+
+export const COACHING_SPORT_TITLE = "Ateliers"
+export const COACHING_SPORT_DESCRIPTION = ""
+
+export const COACHING_STRESS_TITLE = "Ateliers"
+export const COACHING_STRESS_DESCRIPTION = ""
+
+export const COACHING_NUTRITION_TITLE = " Bilan Naturopathique & Coaching Nutritionnel"
+export const COACHING_NUTRITION_DESCRIPTION = "Découvrez notre accompagnement naturopathique personnalisé pour une alimentation équilibrée et nos conseils pratiques adaptés à vos besoins"
