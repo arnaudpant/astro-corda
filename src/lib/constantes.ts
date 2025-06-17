@@ -18,3 +18,6 @@ export const ABOUT_DESCRIPTION = "Retrouvez votre poids de forme, gérez vos str
 
 export const RELAXATION_TITLE = "Relaxations guidées"
 export const RELAXATION_DESCRIPTION = ""
+
+export const ATELIER_TITLE = "Ateliers"
+export const ATELIER_DESCRIPTION = ""
