@@ -22,8 +22,8 @@ export const RELAXATION_DESCRIPTION = ""
 export const ATELIER_TITLE = "Ateliers"
 export const ATELIER_DESCRIPTION = ""
 
-export const COACHING_SPORT_TITLE = "Ateliers"
-export const COACHING_SPORT_DESCRIPTION = ""
+export const COACHING_SPORT_TITLE = " Coaching Sportif Personnalisé | Méthodes sur Mesure"
+export const COACHING_SPORT_DESCRIPTION = "Découvrez nos méthodes pour tonifier votre corps et retrouver le bien-être : Pilates, yoga, entraînement fonctionnel. Pour adultes et femmes enceintes."
 
 export const COACHING_STRESS_TITLE = "Ateliers"
 export const COACHING_STRESS_DESCRIPTION = ""
