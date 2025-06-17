@@ -25,8 +25,8 @@ export const ATELIER_DESCRIPTION = ""
 export const COACHING_SPORT_TITLE = " Coaching Sportif Personnalisé | Méthodes sur Mesure"
 export const COACHING_SPORT_DESCRIPTION = "Découvrez nos méthodes pour tonifier votre corps et retrouver le bien-être : Pilates, yoga, entraînement fonctionnel. Pour adultes et femmes enceintes."
 
-export const COACHING_STRESS_TITLE = "Ateliers"
-export const COACHING_STRESS_DESCRIPTION = ""
+export const COACHING_STRESS_TITLE = "Sophrologie & Gestion du Stress | Relaxation et Développement Personnel"
+export const COACHING_STRESS_DESCRIPTION = "Découvrez un accompagnement personnel en gestion du stress. Libérez-vous avec les techniques de sophrologie de relaxologie et Préparation mentale."
 
 export const COACHING_NUTRITION_TITLE = " Bilan Naturopathique & Coaching Nutritionnel"
 export const COACHING_NUTRITION_DESCRIPTION = "Découvrez notre accompagnement naturopathique personnalisé pour une alimentation équilibrée et nos conseils pratiques adaptés à vos besoins"
