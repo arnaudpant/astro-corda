@@ -1,0 +1,33 @@
+---
+import Sections from "@/components/ui/Sections.astro";
+import TitlePages from "@/components/ui/TitlePages.astro";
+import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
+import MassageCalif from "@/assets/massage/massage-californien.jpg"
+
+---
+
+<Layout>
+    <Sections>
+        <TitlePages>MASSAGE CALIFORNIEN</TitlePages>
+        <div class="my-4 text-left leading-8">
+            <div class="flex justify-center pb-8">
+                <Image src={MassageCalif} alt="massage californier" height={208} format="webp" />
+            </div>
+            <div class="my-4 text-left leading-8">
+                <p>
+                    Ce modelage relaxant va vous envelopper d'un voile de douceur ...
+                </p>
+                <p>
+                    Il va vous rasssembler, vous unifier, vous aider à lâcher les tensions.
+                </p>
+                <p>
+                    Il sagit de mouvements d'effleurage longs et de pétrissages qui peuvent s'intensifier, sur peau nue, des pieds à la tête avec des huiles chaudes.
+                </p>
+                <p>
+                    Massage intuitif, adapté aux besoins de votre corps dans l'instant présent.
+                </p>
+            </div>
+        </div>
+    </Sections>
+</Layout>

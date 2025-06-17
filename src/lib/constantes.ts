@@ -16,6 +16,7 @@ export const TARIFS_DESCRIPTION = "Détails des tarifs pour une séance de natur
 export const ABOUT_TITLE = "Joelle Corda, Naturopathie, Sophrologie et coach sportif"
 export const ABOUT_DESCRIPTION = "Retrouvez votre poids de forme, gérez vos stress et retrouvez une activité physique avec Joelle Corda, naturopathe, sophrologue. 26300 Marches"
 
+//TODO:description
 export const RELAXATION_TITLE = "Relaxations guidées"
 export const RELAXATION_DESCRIPTION = ""
 
