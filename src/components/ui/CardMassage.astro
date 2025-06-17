@@ -3,7 +3,7 @@ import type { CardMassageInfos } from '@/data/cardsType';
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
 
-const { imagePath, altText, titleCard, timeSeance, linkCard } =  Astro.props as CardMassageInfos
+const { imagePath, altText, titleCard, linkCard } =  Astro.props as CardMassageInfos
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/massages/*.{jpeg,jpg,png,gif,webp}')
 if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/massages/*.{jpeg,jpg,png,gif,webp}"`);
 ---
@@ -14,5 +14,4 @@ if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: 
             <p class="absolute bg-corda-secondary text-corda-text-clair text-2xl text-center py-1 rounded-full z-10 min-w-[180px] bottom-4 left-1/2 -translate-x-1/2 shadow-lg">{titleCard}</p>
         </div>
     </a>
-    <p class="text-xl text-center py-3">{timeSeance}</p>
 </div>
