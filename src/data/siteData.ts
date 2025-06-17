@@ -32,7 +32,7 @@ export const linksData: LinkNav[] = [
     },
     {
         text: "Relaxations guidées",
-        url: "/audios"
+        url: "/relaxation-guidee"
     },
     {
         text: "Ateliers",

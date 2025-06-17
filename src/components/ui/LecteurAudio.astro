@@ -1,0 +1,16 @@
+---
+type Props = {
+    title: string;
+    srcAudio: string;
+}
+
+const { title, srcAudio } = Astro.props
+---
+
+<div class="px-4 pt-4 pb-6 my-6 bg-corda-bg-primary rounded-xl">
+    <h2 class="pb-2">{title}</h2>
+    <audio controls preload="auto" src={srcAudio}
+        controlslist="nodownload">
+        Votre navigateur ne supporte pas la balise audio
+    </audio>
+</div>

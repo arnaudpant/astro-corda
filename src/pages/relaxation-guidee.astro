@@ -1,0 +1,31 @@
+---
+import Sections from "@/components/ui/Sections.astro";
+import { Image } from "astro:assets";
+import Relaxation from "@/assets/images/relaxation-guidee.jpg"
+import Layout from "@/layouts/Layout.astro";
+import { RELAXATION_TITLE, RELAXATION_DESCRIPTION } from "@/lib/constantes";
+import LecteurAudio from "@/components/ui/LecteurAudio.astro";
+import Plumes from "@/components/ui/Plumes.astro";
+
+---
+<Layout title={RELAXATION_TITLE} description={RELAXATION_DESCRIPTION}>
+    <Sections>
+        <h1 class="text-2xl md:text-4xl font-semibold mx-5 mt-16 md:mt-4">RELAXATIONS GUIDEES</h1>
+        <div class="rounded-full max-w-[680px] shadow-card overflow-hidden m-8">
+            <Image src={Relaxation} alt="femme ecoutant de la musique sur son lit avec un casque" />
+        </div>
+        <div class="container mx-auto h-full flex flex-col md:flex-row items-center md:justify-center gap-8 mb-8 px-4">
+            <div>
+                <LecteurAudio title="Le cercle d'amour" srcAudio="/audio/Relax7.mp4" />
+                <LecteurAudio title="Respiration carrée sur 6 temps" srcAudio="/audio/Relax2 respiration-carree.m4a" />
+                <LecteurAudio title="Libérez votre mental" srcAudio="/audio/Relax3 liberez votre mental.m4a" />
+            </div>
+            <div>
+                <LecteurAudio title="Les vagues du souffle" srcAudio="/audio/Relax4 Les vagues du souffle.m4a" />
+                <LecteurAudio title="L'envol" srcAudio="/audio/Relax5 envol.m4a" />
+                <LecteurAudio title="Ouverture et réceptivité" srcAudio="/audio/Relax6 ouverture.m4a" />
+            </div>
+        </div>
+        <Plumes />
+    </Sections>
+</Layout>
